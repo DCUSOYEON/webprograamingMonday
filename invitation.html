@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Invitation </title>
+<style>
+h1 {
+    color:red;
+}
+h2 {
+    color:green;
+}
+body {
+    font-family: Arial;
+}
+
+/* Style the tab */
+div.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+div.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+div.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+div.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+</style>
+</head>
+
+<body>
+    <h1>Merry Christmas!</h1>
+    <h2>I will invite you. Everyone will be here, right?</h2>
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'When')">When</button>
+  <button class="tablinks" onclick="openCity(event, 'Where')">Where</button>
+</div>
+
+<div id="When" class="tabcontent">
+  <h3>On Christmas</h3>
+  <p>December 25th midnight</p>
+</div>
+
+<div id="Where" class="tabcontent">
+  <h3>My house</h3>
+  <p>102-1803, 75, Seongji-ro, Dalseo-gu, Daegu, Republic of Korea</p>
+  <p><a href="https://dcusoyeon.github.io/webprograamingMonday/map.html">view a map</a></p>
+</div>
+
+<div calss="images">
+    <img src="https://dcusoyeon.github.io/webprograamingMonday/bg1.jpg" alt="bg1" width="1584" height="800">
+</div>
+
+<script>
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+</body>
+</html> 
